@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Malala</title>
+    <meta name="description" content="contato- formulário">
+    <meta name="keywords" content="contato, livro, malala">
+    <meta name="author" content="Thamires M. Bonezo">
+    <link rel="stylesheet" href="estilo_3.css">
+    <link rel="icon" type="image/jpg" href="img/malala_3.jpg">
+    <script type="text/javascript">
+        function validar() {
+            var form = document.forms['form1'];
+            var nome = form.nome.value;
+            var email = form.email.value;
+            var tel = form.tel.value;
+
+            if (nome == "") {
+                alert("Preencha o campo com o seu nome");
+                form.nome.focus();
+                return false;
+            }
+
+            if (nome.length < 5) {
+                alert("Digite seu nome completo");
+                form.nome.focus();
+                return false;
+            }
+
+            if (email == "") {
+                alert("Preencha o campo com seu email");
+                form.email.focus();
+                return false;
+            }
+
+            if (email.length < 5) {
+                alert("Digite seu email completo");
+                form.email.focus();
+                return false;
+            }
+            
+            if (!email.includes('@')) {
+                alert("Digite um email válido");
+                form.email.focus();
+                return false;
+            }
+
+            if (tel == "") {
+                alert("Preencha o campo com seu telefone");
+                form.tel.focus();
+                return false;
+            }
+
+            if (tel.length < 5) {
+                alert("Digite seu telefone completo");
+                form.tel.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <font face="Courier" size="4" color="white">
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="atentado.html">Atentado</a></li>
+                <li><a href="livros.html">Livros</a></li>
+                <li><a href="premios.html">Curiosidades</a></li>
+                <li><a href="bibliografia.html">Bibliografia</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <center>
+            <br><br><br>
+            <h2>Contato:</h2>
+            <br>
+            <table align="center" cellspacing="20" width="800">
+                <tr>
+                    <td>
+                        <form name="form1" action="confirmacaodedados.html" method="post" onsubmit="return validar()">
+                            Nome: <input name="nome" type="text" required><br><br>
+                            Email: <input name="email" type="text" required><br><br>
+                            Telefone: <input name="tel" type="text" required><br><br>
+                            Dê uma nota ao site:
+                            <select name="nota">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                            <br><br>
+                            Comentário:<br>
+                            <textarea style="resizze: none" name="comentario" cols="60" rows="10"></textarea><br><br>
+                            <input type="submit" value="Enviar">
+                            <input type="reset" name="limpa" value="Limpar">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <hr width="90%" color="0D294B" size="2" align="center"><br>
+            <footer>
+                <h5>Thamires M. Bonezo 2024 - &copy; Todos os direitos reservados</h5>
+                <br> Trabalho acadêmico sem fins lucrativos
+            </footer>
+        </center>
+    </font>
+    <div align="right">
+        <a href="#"><img src="img/sobe1.png" width="2%"></a>
+    </div>
+</body>
+</html>

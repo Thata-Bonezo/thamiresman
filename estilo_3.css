@@ -1,0 +1,61 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+textarea{resize: none;}
+
+body{	
+	font-family: "courier";
+	background: #0D294B;
+	background-image: url('img/fundo_brilho.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}	
+
+#menu{
+	width: 100%;
+	height: 60px;
+	background: #134D92;
+	color: white;
+}
+
+#menu li{
+	display: block;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#menu a{
+	float:left;
+	text-decoration: none; 
+	color: #FFFFFF;
+	text-transform: uppercase;
+	line-height: 60px;
+	height: 60px;
+	padding: 0px 30px;
+}
+
+#menu a: hover{
+	background: #6F3EBA;
+}
+
+#menu i{
+	height: 60px;
+	line-height: 60px;
+}
+
+#menu i.left {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 5px;
+}
+
+#menu i.right {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 5px;
+}
+
